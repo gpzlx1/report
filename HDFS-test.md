@@ -41,7 +41,7 @@ bert                                                                            
 
 real	0m9.890s
 user	0m7.956s
-sys		0m2.512s
+sys	0m2.512s
 ```
 
 ##	hadoop
@@ -65,7 +65,7 @@ drwxr-xr-x   - gpzlx1 supergroup          0 2019-08-20 19:21 none
   
   real	0m7.242s
   user	0m15.096s
-  sys		0m3.042s
+  sys	0m3.042s
   ```
 
 * none
@@ -75,7 +75,7 @@ drwxr-xr-x   - gpzlx1 supergroup          0 2019-08-20 19:21 none
   
   real	0m8.795s
   user	0m10.225s
-  sys		0m2.746s
+  sys	0m2.746s
   ```
 
 | ec            | write time consume | storage comsume     |
@@ -93,7 +93,7 @@ drwxr-xr-x   - gpzlx1 supergroup          0 2019-08-20 19:21 none
   
   real	0m7.070s
   user	0m6.282s
-  sys		0m3.812s
+  sys	0m3.812s
   ```
 
 * none
@@ -103,7 +103,7 @@ drwxr-xr-x   - gpzlx1 supergroup          0 2019-08-20 19:21 none
   
   real	0m7.154s
   user	0m5.160s
-  sys		0m4.698s
+  sys	0m4.698s
   ```
 
 | ec            | read time consume |
