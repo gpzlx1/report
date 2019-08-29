@@ -43,7 +43,7 @@ python tools/im2rec.py --resize 480 --quality 95 --num-thread 16 mydata img_data
 
 ![baserecordio](assets/ImageRecordIO.jpg)
 
-It can use dataiter to read and re-preprocess the images using `mx.io.ImageRecordIter` API
+MXNet can use dataiter to read and re-preprocess the images using `mx.io.ImageRecordIter` API
 
 The following example code demonstrates a Cifar data iterator.
 
