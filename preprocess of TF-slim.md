@@ -36,7 +36,7 @@ Note:
 
 Notes:
 
-	*	the color space of image should be RGB
+* the color space of image should be RGB
 
 For training:
 
@@ -47,8 +47,7 @@ For training:
 5. subtract the given means from each new image channel. The given means is [ R_MEAN, G_MEAN, B_MEAN] which value is [ 123.68, 116.78, 103.94 ]
 
 For evaluating:
-
-	1.	resize the image  preserving the original aspect ratio by scaling the smallest side to a random number in [ 256, 512 ] 
- 	2.	centrally crop a  [ out_height, out_width ]  section of the image
- 	3.	transform the new image to floats
- 	4.	subtract the given means from each new image channel. The given means is [ R_MEAN, G_MEAN, B_MEAN] which value is [ 123.68, 116.78, 103.94 ]
+1.	resize the image  preserving the original aspect ratio by scaling the smallest side to a random number in [ 256, 512 ] 
+2.	centrally crop a  [ out_height, out_width ]  section of the image
+3.	transform the new image to floats
+4.	subtract the given means from each new image channel. The given means is [ R_MEAN, G_MEAN, B_MEAN] which value is [ 123.68, 116.78, 103.94 ]
