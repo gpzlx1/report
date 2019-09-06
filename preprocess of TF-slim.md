@@ -1,4 +1,4 @@
-#	preprocess of TF-slim
+#	preprocessing of TF-slim
 
 ##	[cifarnet](https://github.com/tensorflow/models/blob/master/research/slim/preprocessing/cifarnet_preprocessing.py)
 
@@ -6,7 +6,7 @@ For training:
 
 1. transform the image to floats
 2. pad the image with zero from [ input_height, input_width, channel ] to [ 4 + input_height + 4, 4 + input_width + 4, channel ]
-3. randomly crop a  [ height, width ]  section of the image
+3. randomly crop a  [ out_height, out_width ]  section of the image
 4. randomly flip the image horizontally
 5. adjust the brightness of the image by a random factor.
 6. adjust the contrast of the image by a random factor.
@@ -15,7 +15,7 @@ For training:
 For evaluating:
 
 1. transform the image to floats
-2. resize the image with crop or pad operation
+2. resize the image centrally with crop or pad operation
 3. subtract off the mean and divide by the variance of the pixels ( standardization )
 
 Note:	
@@ -34,4 +34,21 @@ Note:
 
 ##	[vgg](https://github.com/tensorflow/models/blob/master/research/slim/preprocessing/vgg_preprocessing.py)
 
+Notes:
 
+	*	the color space of image should be RGB
+
+For training:
+
+1. resize the image  preserving the original aspect ratio by scaling the smallest side to a random number in [ 256, 512 ] 
+2. randomly crop a  [ out_height, out_width ]  section of the image
+3. transform the new image to floats
+4. randomly flip the new image horizontally
+5. subtract the given means from each new image channel. The given means is [ R_MEAN, G_MEAN, B_MEAN] which value is [ 123.68, 116.78, 103.94 ]
+
+For evaluating:
+
+	1.	resize the image  preserving the original aspect ratio by scaling the smallest side to a random number in [ 256, 512 ] 
+ 	2.	centrally crop a  [ out_height, out_width ]  section of the image
+ 	3.	transform the new image to floats
+ 	4.	subtract the given means from each new image channel. The given means is [ R_MEAN, G_MEAN, B_MEAN] which value is [ 123.68, 116.78, 103.94 ]
