@@ -22,7 +22,19 @@ Note:
 
 ​	standardization uses `tf.image.per_image_standardization(image）`function which  computes `(x - mean) / adjusted_stddev`, where `x` is each pixel and `mean` is the average of all values in image, and `adjusted_stddev = max(stddev, 1.0/sqrt(iamge.NumElements))`.
 
-##	inception
+##	[inception](https://github.com/tensorflow/models/blob/master/research/slim/preprocessing/inception_preprocessing.py)
+
+Notes:
+
+*  image: 3-D Tensor of image. If dtype is tf.float32 then the range should be
+      [0, 1], otherwise it would converted to tf.float32 assuming that the range
+      is [0, MAX], where MAX is largest positive representable number for
+      int(8/16/32) data type (see `tf.image.convert_image_dtype` for details).
+
+For training:
+
+1. if data type is integer, transform the image to floats between 0 and 1
+2. 
 
 ## [lenet](https://github.com/tensorflow/models/blob/master/research/slim/preprocessing/lenet_preprocessing.py)
 
