@@ -57,7 +57,7 @@ For evaluating:
 
 2. resize the image with crop or pad operation
 
-3. each pixel is  subtracted by 128.0 and divided by 128.0 ( standardization )
+3. each pixel is  subtracted by 128.0 and divided by 128.0
 
 ##	[vgg](https://github.com/tensorflow/models/blob/master/research/slim/preprocessing/vgg_preprocessing.py)
 
