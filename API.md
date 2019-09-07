@@ -1,3 +1,5 @@
+[TOC]
+
 # API
 
 ## data augmentation
@@ -62,6 +64,44 @@ A list of supporting augmenters：
 | [`image.HorizontalFlipAug`](https://mxnet.incubator.apache.org/api/python/image/image.html#mxnet.image.HorizontalFlipAug) | Random horizontal flip.                                      |
 | [`image.CastAug`](https://mxnet.incubator.apache.org/api/python/image/image.html#mxnet.image.CastAug) | Cast to float32                                              |
 
+### pyTorch
+
+**CLASS** `torchvision.transforms.ColorJitter(*brightness=0*, *contrast=0*, *saturation=0*, *hue=0*)`: Randomly change the brightness, contrast and saturation of an image.
+
+**CLASS** `torchvision.transforms.RandomAffine(*degrees*, *translate=None*, *scale=None*, *shear=None*, *resample=False*, *fillcolor=0*)`: Random affine transformation of the image keeping center invariant
+
+**CLASS** `torchvision.transforms.RandomApply(*transforms*, *p=0.5*)`: Apply randomly a list of transformations with a given probability
+
+**CLASS** `torchvision.transforms.RandomChoice(*transforms*)`: Apply single transformation randomly picked from a list
+
+**CLASS** `torchvision.transforms.RandomHorizontalFlip(*p=0.5*)`: Horizontally flip the given PIL Image randomly with a given probability.
+
+**CLASS** `torchvision.transforms.RandomOrder(*transforms*)`: Apply a list of transformations in a random order
+
+**CLASS** `torchvision.transforms.RandomPerspective(*distortion_scale=0.5*, *p=0.5*, *interpolation=3*)`: Performs Perspective transformation of the given PIL Image randomly with a given probability.
+
+**CLASS** `torchvision.transforms.RandomRotation(*degrees*, *resample=False*, *expand=False*, *center=None*)`: Rotate the image by angle.
+
+**CLASS** `torchvision.transforms.RandomVerticalFlip(*p=0.5*)`: Vertically flip the given PIL Image randomly with a given probability.
+
+**FUNCTION** `torchvision.transforms.FUNCTIONal.adjust_brightness(*img*, *brightness_factor*)`: Adjust brightness of an Image.
+
+**FUNCTION** `torchvision.transforms.FUNCTIONal.adjust_contrast(*img*, *contrast_factor*)`: Adjust contrast of an Image.
+
+**FUNCTION** `torchvision.transforms.FUNCTIONal.adjust_gamma(*img*, *gamma*, *gain=1*)`: Perform gamma correction on an image.
+
+**FUNCTION** `torchvision.transforms.FUNCTIONal.adjust_hue(*img*, *hue_factor*)`: Adjust hue of an image.
+
+**FUNCTION** `torchvision.transforms.FUNCTIONal.adjust_saturation(*img*, *saturation_factor*)`: Adjust color saturation of an image.
+
+**FUNCTION** `torchvision.transforms.FUNCTIONal.affine(*img*, *angle*, *translate*, *scale*, *shear*, *resample=0*, *fillcolor=None*)`: Apply affine transformation on the image keeping image center invariant
+
+**FUNCTION** `torchvision.transforms.FUNCTIONal.hflip(*img*)`: Horizontally flip the given PIL Image.
+
+**FUNCTION** `torchvision.transforms.FUNCTIONal.rotate(*img*, *angle*, *resample=False*, *expand=False*, *center=None*)`: Rotate the image by angle.
+
+**FUNCTION** `torchvision.transforms.FUNCTIONal.vflip(*img*)`: Vertically flip the given PIL Image.
+
 ## data resize
 
 ### tensorflow
@@ -103,6 +143,38 @@ A list of supporting augmenters：
 | [`image.center_crop`](https://mxnet.incubator.apache.org/api/python/image/image.html#mxnet.image.center_crop) | Crops the image src to the given size by trimming on all four sides and preserving the center of the image. |
 | [`image.random_size_crop`](https://mxnet.incubator.apache.org/api/python/image/image.html#mxnet.image.random_size_crop) | Randomly crop src with size.                                 |
 
+### pyTorch
+
+**CLASS** `torchvision.transforms.CenterCrop(*size*)`: Crops the given PIL Image at the center.
+
+**CLASS** `torchvision.transforms.FiveCrop(*size*)`: Crop the given PIL Image into four corners and the central crop
+
+**CLASS** `torchvision.transforms.Pad(*padding*, *fill=0*, *padding_mode='constant'*)`: Pad the given PIL Image on all sides with the given “pad” value.
+
+**CLASS** `torchvision.transforms.RandomCrop(*size*, *padding=None*, *pad_if_needed=False*, *fill=0*, *padding_mode='constant'*)`: Crop the given PIL Image at a random location.
+
+**CLASS** `torchvision.transforms.RandomResizedCrop(*size*, *scale=(0.08*, *1.0)*, *ratio=(0.75*, *1.3333333333333333)*, *interpolation=2*)`: Crop the given PIL Image to random size and aspect ratio. A crop of random size (default: of 0.08 to 1.0) of the original size and a random aspect ratio (default: of 3/4 to 4/3) of the original aspect ratio is made. This crop is finally resized to given size. This is popularly used to train the Inception networks.
+
+**CLASS** `torchvision.transforms.RandomSizedCrop(**args*, ***kwargs*)`: Note: This transform is deprecated in favor of RandomResizedCrop.
+
+**CLASS** `torchvision.transforms.Resize(*size*, *interpolation=2*)`: Resize the input PIL Image to the given size.
+
+**CLASS** `torchvision.transforms.Scale(**args*, ***kwargs*)`： Note: This transform is deprecated in favor of Resize.
+
+**CLASS** `torchvision.transforms.TenCrop(*size*, *vertical_flip=False*)`： Crop the given PIL Image into four corners and the central crop plus the flipped version of these (horizontal flipping is used by default)
+
+**FUNCTION** `torchvision.transforms.FUNCTIONal.crop(*img*, *i*, *j*, *h*, *w*)`: Crop the given PIL Image.
+
+**FUNCTION** `torchvision.transforms.FUNCTIONal.erase(*img*, *i*, *j*, *h*, *w*, *v*, *inplace=False*)`: Erase the input Tensor Image with given value.
+
+**FUNCTION** `torchvision.transforms.FUNCTIONal.five_crop(*img*, *size*)`: Crop the given PIL Image into four corners and the central crop.
+
+**FUNCTION** `torchvision.transforms.FUNCTIONal.pad(*img*, *padding*, *fill=0*, *padding_mode='constant'*)`: Pad the given PIL Image on all sides with specified padding mode and fill value.
+
+**FUNCTION** `torchvision.transforms.FUNCTIONal.resize(*img*, *size*, *interpolation=2*)`: Resize the input PIL Image to the given size.
+
+**FUNCTION** `torchvision.transforms.FUNCTIONal.resized_crop(*img*, *i*, *j*, *h*, *w*, *size*, *interpolation=2*)`: Crop the given PIL Image and resize it to desired size.
+
 ## data alignment and normalization （standardization)
 
 ### tensorflow
@@ -114,6 +186,12 @@ A list of supporting augmenters：
 | [`image.color_normalize`](https://mxnet.incubator.apache.org/api/python/image/image.html#mxnet.image.color_normalize) | Normalize src with mean and std. |
 | ------------------------------------------------------------ | -------------------------------- |
 |                                                              |                                  |
+
+### pyTorch
+
+*CLASS*`torchvision.transforms.``Normalize`(*mean*, *std*, *inplace=False*): Normalize a tensor image with mean and standard deviation. Given mean: `(M1,...,Mn)` and std: `(S1,..,Sn)` for `n` channels, this transform will normalize each channel of the input `torch.*Tensor` i.e. `input[channel] = (input[channel] - mean[channel]) / std[channel]`
+
+`torchvision.transforms.FUNCTIONal.``normalize`(*tensor*, *mean*, *std*, *inplace=False*): Normalize a tensor image with mean and standard deviation.
 
 ## color space conversion
 
@@ -138,3 +216,16 @@ A list of supporting augmenters：
 ###	mxnet
 
 MXNet has no  explicit APIs for color space conversion, but it can finish the tasks depending on OpenCV2. After all, the operations of images transforming in MXNet are also based on OpenCV2.
+
+### pyTorch
+
+**CLASS** `torchvision.transforms.Grayscale(*num_output_channels=1*)`: Convert image to grayscale.
+
+**CLASS** `torchvision.transforms.RandomGrayscale(*p=0.1*)`: Randomly convert image to grayscale with a probability of p (default 0.1).
+
+**FUNCTION** `torchvision.transforms.FUNCTIONal.to_grayscale(*img*, *num_output_channels=1*)`: Convert image to grayscale version of image.
+
+
+
+
+
