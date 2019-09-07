@@ -34,7 +34,22 @@ Notes:
 For training:
 
 1. if data type is integer, transform the image to floats between 0 and 1
-2. 
+2. randomly crop the image
+3. resize the image to the specified height and width. There are 1 or 4 way s to do it.
+   * 1 (fast model) : Bilinear interpolation
+   * 4 : Bilinear interpolation+ Nearest neighbor interpolation + Bicubic interpolation + Area interpolation.
+4. randomly flip the image horizontally
+5. Randomly distort the colors. There are 4 ways to do it.\
+   * 1 (fast model) : random_brightness + random_saturation
+   * 4 ：random_brightness + random_saturation + random_hue + random_contrast
+6. convert the pixel value to [ -1, 1 ]
+
+For evaluating:
+
+1. if data type is integer, transform the image to floats between 0 and 1
+2. centrally crop the image with an area containing 87.5% of the original image
+3. resize the image to the specified height and width
+4. convert the pixel value to [ -1, 1 ] 
 
 ## [lenet](https://github.com/tensorflow/models/blob/master/research/slim/preprocessing/lenet_preprocessing.py)
 
