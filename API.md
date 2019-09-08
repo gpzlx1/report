@@ -22,8 +22,6 @@
 
 [`random_contrast(...)`](https://www.tensorflow.org/api_docs/python/tf/image/random_contrast): Adjust the contrast of an image or images by a random factor.
 
-[`random_crop(...)`](https://www.tensorflow.org/api_docs/python/tf/image/random_crop): Randomly crops a tensor to a given size.
-
 [`random_flip_left_right(...)`](https://www.tensorflow.org/api_docs/python/tf/image/random_flip_left_right): Randomly flip an image horizontally (left to right).
 
 [`random_flip_up_down(...)`](https://www.tensorflow.org/api_docs/python/tf/image/random_flip_up_down): Randomly flips an image vertically (upside down).
@@ -105,6 +103,8 @@ A list of supporting augmenters：
 ## data resize
 
 ### tensorflow
+
+[`random_crop(...)`](https://www.tensorflow.org/api_docs/python/tf/image/random_crop): Randomly crops a tensor to a given size.
 
 [`central_crop(...)`](https://www.tensorflow.org/api_docs/python/tf/image/central_crop): Crop the central region of the image(s).
 
