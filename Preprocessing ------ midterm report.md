@@ -10,6 +10,8 @@ the preprocessors of image can be divided roughly into the conventional and the 
 
 ####	data augmentation
 
+
+
 ####	data alignment and normalization （standardization)
 
 ###	Unconventional preprocessors
@@ -174,3 +176,8 @@ The open source machine learning library should also support image processing li
 [see basic api here](API.md)
 
 [table_in_excel](basic_api.xlsx)
+
+## Reference
+
+[1.Understanding Unconventional Preprocessors in Deep Convolutional Neural Networksfor FaceIdentification](https://arxiv.org/abs/1904.00815)
+
