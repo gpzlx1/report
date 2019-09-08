@@ -10,17 +10,27 @@ the preprocessors of image can be divided roughly into the conventional and the 
 
 ####	data augmentation
 
+> Recent advances in deep learning models have been largely attributed to the quantity and diversity of data gathered in recent years. Data augmentation is a strategy that enables practitioners to significantly increase the diversity of data available for training models, without actually collecting new data. Data augmentation techniques such as cropping, padding, and horizontal flipping are commonly used to train large neural networks.
 
+####	data normalization （standardization)
 
-####	data alignment and normalization （standardization)
+> Broadly speaking, the reason we normalize the images is to make the model converge faster. When the data is not normalized, the shared weights of the network have different calibrations for different features, which can make the cost function to converge very slowly and ineffectively. Normalizing the data makes the cost function much easier to train.
 
 ###	Unconventional preprocessors
 
 #### color space conversion
 
+Many CNN models take the images as input in the form of RGB images and classify them without modifying them. There are some researches show the  great impact of the color space conversion on the accuracy of model. Therefore, it is necessary sometimes to convert the color space of images
+
 #### image degradation
 
+Image degradation is to reduce the bit depth of images to reduce calculation and speed up training and inference.
+
 #### illumination normalization and insensitive feature preprocessing
+
+These preprocessors are usually applied in face recognition.
+
+> For  face  images  acquired  at  different  spectral  bands,  the effects of spatial variation in sensitivity of camera systems, is likely to occur.  To minimize the variability effect for the face images  of  the  same  class, rgbGELog and commonly used  illumination  normalization  techniques  are employed. Other  approaches, such  as LN and  CFSP, involve the extraction of illumination-insensitive features. These types of feature  preprocessors  mostly  enhance edges  as  opposed  to low-level features. To output a color image with HE, LN and CFSP,  a  color  image  version  of  the  preprocessors  is  used. Given  an  RGB  image,  each  channel  plane  is  processed   
 
 ## Commonality of preprocessing in main deep CNN model
 
@@ -181,3 +191,6 @@ The open source machine learning library should also support image processing li
 
 [1.Understanding Unconventional Preprocessors in Deep Convolutional Neural Networksfor FaceIdentification](https://arxiv.org/abs/1904.00815)
 
+[2.1000x Faster Data Augmentation]([https://bair.berkeley.edu/blog/2019/06/07/data_aug/#targetText=Data%20augmentation%20is%20a%20strategy,to%20train%20large%20neural%20networks.](https://bair.berkeley.edu/blog/2019/06/07/data_aug/#targetText=Data augmentation is a strategy,to train large neural networks.))
+
+[3.ColorNet: Investigating the importance of colorspaces for image classification⋆]([chrome-extension://cdonnmffkdaoajfknoeeecmchibpmkmg/static/pdf/web/viewer.html?file=https%3A%2F%2Farxiv.org%2Fpdf%2F1902.00267.pdf](chrome-extension://cdonnmffkdaoajfknoeeecmchibpmkmg/static/pdf/web/viewer.html?file=https%3A%2F%2Farxiv.org%2Fpdf%2F1902.00267.pdf))
