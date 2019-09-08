@@ -191,6 +191,6 @@ The open source machine learning library should also support image processing li
 
 [1.Understanding Unconventional Preprocessors in Deep Convolutional Neural Networksfor FaceIdentification](https://arxiv.org/abs/1904.00815)
 
-[2.1000x Faster Data Augmentation]([https://bair.berkeley.edu/blog/2019/06/07/data_aug/#targetText=Data%20augmentation%20is%20a%20strategy,to%20train%20large%20neural%20networks.](https://bair.berkeley.edu/blog/2019/06/07/data_aug/#targetText=Data augmentation is a strategy,to train large neural networks.))
+[2.1000x Faster Data Augmentation](https://bair.berkeley.edu/blog/2019/06/07/data_aug/#targetText=Data augmentation is a strategy,to train large neural networks.)
 
-[3.ColorNet: Investigating the importance of colorspaces for image classification⋆]([chrome-extension://cdonnmffkdaoajfknoeeecmchibpmkmg/static/pdf/web/viewer.html?file=https%3A%2F%2Farxiv.org%2Fpdf%2F1902.00267.pdf](chrome-extension://cdonnmffkdaoajfknoeeecmchibpmkmg/static/pdf/web/viewer.html?file=https%3A%2F%2Farxiv.org%2Fpdf%2F1902.00267.pdf))
+[3.ColorNet: Investigating the importance of colorspaces for image classification⋆](https://arxiv.org/abs/1902.00267)
