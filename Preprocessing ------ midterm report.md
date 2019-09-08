@@ -151,3 +151,26 @@ For training:
 | vgg       | √              | √                                                  | random_flip_horizontally                                     | normalization ( subtract the means of ImageNet dataset in each channel ) |
 
 The preprocessing for evaluating is similar but without data augmentation.
+
+## Basic image operations API in open source machine learning library
+
+We have calculated the API of basic operation of image preprocessing provided in `mxnet`, `tensorflow` and `pyTorch`, and formed the following table. These basic operations can be broadly divided into four categories :`data augmentation`, `data normalization` , `data resizing` and `color space conversion`.
+
+With tables and statistics, an open source machine learning should provide at least the following functional interfaces:
+
+* `data augmentation`: adjustment of  brightness & contrast & hue & saturation, rotation, horizontally flip
+* `data resizing`: crop, pad, interpolation, resize
+* `data normalization`: normalization
+
+The open source machine learning library should also support image processing library like OpenCV2, in case the users want to using unconventional preprocessors.
+
+| ops        | data augmentation |          |       |      |            |          |                   |                 |           |        |              | data resize |        |      |               |       | data  normalization (standardization) | color space conversion |                      |                  |                  |
+| ---------- | ----------------- | -------- | ----- | ---- | ---------- | -------- | ----------------- | --------------- | --------- | ------ | ------------ | ----------- | ------ | ---- | ------------- | ----- | ------------------------------------- | ---------------------- | -------------------- | ---------------- | ---------------- |
+| model      | brightness        | contrast | gamma | hue  | saturation | rotation | horizontally flip | vertically flip | pca_noise | affine | jpeg_quality | crop        | resize | pad  | interpolation | erase | normalization (standardization)       | hsv, yiq, yuv_to_rgb   | rgb_to_hsv, yiq, yuv | rgb_to_grayscale | grayscale_to_rgb |
+| tensorflow | √                 | √        | √     | √    | √          | √        | √                 | √               |           |        | √            | √           | √      | √    | √             |       | √                                     | √                      | √                    | √                | √                |
+| mxnet      | √                 | √        |       | √    | √          | √        | √                 |                 | √         |        |              | √           | √      | √    | √             |       | √                                     |                        |                      |                  |                  |
+| pytorch    | √                 | √        | √     | √    | √          | √        | √                 | √               |           | √      |              | √           | √      | √    | √             | √     | √                                     |                        |                      | √                |                  |
+
+[see basic api here](API.md)
+
+[table in excel](basic api.xlsx)
