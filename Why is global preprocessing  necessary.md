@@ -77,7 +77,7 @@ There are three reasons:
 
    > Turning the data to record format will take up a lot of time
 
-3. Some CNN models may use more complicated preprocessing methods (relatively rare)
+3. Some CNN models may use more complicated preprocessing methods to improve the accuracy of CNN model (relatively rare)
 
 About image preprocessing, different machine learning architectures have different policies. For example, `tensorflow` tends to complete all image pre-processing operations before training, while `MXnet` puts preprocessing operations in the training process as much as possible, but even so, global preprocessing is inevitable, especially generating data records.
 
