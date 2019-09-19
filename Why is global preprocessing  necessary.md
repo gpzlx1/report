@@ -8,13 +8,13 @@ The preprocessing of images is mainly to achieve the following objectives:
 
 * The image size needs to be adapted to the network input requirements. Several mainstream CNN models have fixed image input size requirements. Like the VGG model, the input images are all 224 * 224 resolution
 * The picture format needs to be adapted to the network training requirements. Some neural network training frameworks may only support images in jpeg format. So in some cases, you must convert the format of the image. Some neural networks may be trained in RGB space, which requires that all images be in RGB format.
-* Reasonably divide the training set and the verification set.
+* Reasonably divide the training set and the evaluation set.
 * Make the necessary corrections to the data set distribution. If the training data is extremely unbalanced, then operations such as undersampling or oversampling or replenishment need to be done in order to prevent the model results from being biased towards large data categories.
 * Extract data features. Some deep learning precision relies heavily on certain operations on the image, such as face recognition, which must first perform a data alignment operation (to  find out the part of the face in the image)
 
 additional:
 
-* Data augmentation. Extend the data set and improve the generalization ability of the model by cutting data, flipping, adjusting image parameters, etc.
+* Data augmentation. Extend the data set and improve the generalization ability of the model by cropping, flipping, adjusting image parameters, etc.
 * data normalization
 * Process the data into a specific storage format, such as record. The record format facilitates sequential reading, which is disk and memory friendly and can  accelerate neural network training greatly.
 
@@ -61,7 +61,7 @@ The neural network uses the **(batch)** **gradient descent** to update the param
 8. go to 1
 9. stop
 
-Unsupervised learning is similar, except that there may be  no validation set.
+Unsupervised learning is similar, except that there may be  no evaluation set.
 
 ## Why is there a global preprocessing before training？
 
