@@ -89,7 +89,7 @@ About image preprocessing, different machine learning architectures have differe
 
 > Transfer learning is a popular method in computer vision because it allows us to **build accurate models in a timesaving way** (Rawat & Wang 2017). With transfer learning, instead of starting the learning process from scratch, you start from patterns that have been learned when solving a different problem. This way you leverage previous learnings and avoid starting from scratch. Take it as the deep learning version of [Chartres](https://en.wikipedia.org/wiki/Standing_on_the_shoulders_of_giants)’ expression ‘standing on the shoulder of giants’.
 
-Transfer learning using the pre-train model can spend several hours to converge even on a big data set. But preprocessing of big data set can also spend dozens of minutes and even several hours. It seems necessary to speed up the preprocessing.
+Transfer learning using the pre-train model can spend only several hours to converge even on a big data set. But preprocessing of big data set can also spend dozens of minutes and even several hours. It seems necessary to speed up the preprocessing.
 
 **However, talk is cheap, we need more experiments.**
 
